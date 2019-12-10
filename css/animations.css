@@ -1,0 +1,107 @@
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* ALTERNATIEVE NOTATIES 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+    }
+  }
+  */
+
+  .onzeSelectie {
+    animation-name: fadeOut;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+  }
+
+  /* ALTERNATIEVE NOTATIES 
+  .onzeSelectie {
+    animation: fadeOut 4s 1s infinite linear alternate;
+  }
+  */
+
+  /*Meerdere animaties toevoegen kan*/
+  .nogEenSelectie {
+    animation: fadeOut 4s 1s infinite linear alternate,
+               rotate 4s 1s infinite linear alternate;
+  }
+  
+  @keyframes rotate {
+    to {
+      transform: rotate(180deg);
+    }
+  }
+
+
+  @keyframes square-to-circle {
+    0%  {
+      border-radius:0 0 0 0;
+      background:coral;
+      transform:rotate(0deg);
+    }
+    25%  {
+      border-radius:50% 0 0 0;
+      background:darksalmon;
+      transform:rotate(45deg);
+    }
+    50%  {
+      border-radius:50% 50% 0 0;
+      background:indianred;
+      transform:rotate(90deg);
+    }
+    75%  { 
+      border-radius:50% 50% 50% 0;
+      background:lightcoral;
+      transform:rotate(135deg);
+    }
+    100% {  
+      border-radius:50%;
+      background:darksalmon;
+      transform:rotate(180deg);
+    }
+  }
+
+  @keyframes bounceIn{
+    0% { 
+      transform: scale(0.1); 
+      -webkit-transform: scale(0.1);
+      opacity: 0;
+    } 
+  
+    60% { 
+      transform: scale(1.2); 
+      -webkit-transform: scale(1.2);
+      opacity: 1;
+    } 
+  
+    100% { 
+      transform: scale(1); 
+      -webkit-transform: scale(1);
+    }
+  }
+
+  .entry{
+    animation-duration: 2s;
+    animation-name: bounceIn;
+    display: inline-block;
+    }
+    

@@ -1,0 +1,39 @@
+/* bug in chrome waardoor je transitie te vroeg speelt: https://bugs.chromium.org/p/chromium/issues/detail?id=332189 */
+body {
+    background-color: lightblue;
+    margin: 0 2%;
+    text-align: center;
+}
+
+.myElement {
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 5em;
+    color: black;
+    background-color: pink;
+    /* alle properties (van hover) worden veranderd binnen 1 seconde*/
+    transition: 1s; 
+
+    /*properties (van hover) individueel aanpassen*/
+    /* transition: background-color 1.5s, border-radius 0.8s, transform 1s; */
+
+    /* extra vertraging van 1 seconde voor de background-color */
+    /* transition: background-color 1.5s 1s, border-radius 0.8s, transform 1s;  */   
+    
+    /* tijdsfuncties meegeven */
+    /* transition: background-color 1.5s, border-radius 0.8s, transform 1s steps(6, end);  */
+    
+    /* Notatie met individuele properties, i.p.v. op één lijn */
+    /* transition-property: background-color, border-radius, transform;
+    transition-timing-function: linear, cubic-bezier(1, 0, 0, 1), steps(6, end);
+    transition-duration: 1s, 0.8s, 1s;
+    transition-delay: 1s, 0.2s, 0s;  */
+}
+
+.myElement:hover {
+    background-color: lightskyblue;
+    border-radius: 50% 50%;
+    transform: rotateY(360deg);
+}

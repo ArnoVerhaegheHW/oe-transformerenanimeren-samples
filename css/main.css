@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');/*font-family: 'Bangers', cursive;*/
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great'); /*font-family: 'Fredericka the Great', cursive;*/
+@import url('https://fonts.googleapis.com/css?family=Mukta'); /*font-family: 'Mukta', sans-serif;*/
+
+body{
+    background-color: whitesmoke;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.25em;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1{    
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: normal;
+    font-size: 3.5em;    
+}
+
+h3{
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: normal;
+    font-size: 2em;
+    display: inline-block;
+}
+
+code{
+    font-weight: bold;
+    color: blueviolet;
+}
+
+aside{
+    position: absolute;
+    top:50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    outline: 1px solid transparent; /*FF pixel perfect fix*/
+    /*animation: square-to-circle 2s 1s infinite alternate;  */
+    /*Via https://matthewlein.com/tools/ceaser*/
+    animation: square-to-circle 2s 1s cubic-bezier(0.600, -0.430, 0.500, 1.410) infinite alternate;
+}
+
